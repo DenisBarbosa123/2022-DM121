@@ -7,60 +7,60 @@
     <title>HTML Forms</title>
 </head>
 <body>
-    <form action="">
+    <form method="post" action="https://httpbin.org/post">
         <fieldset>
             <legend>Personal information</legend>
             <label for="name">
                 Name:
-                <input type="text" id="name">
+                <input type="text" id="name" name="name">
             </label>
             <hr>
             <label for="email">
                 Email:
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
             </label>
         </fieldset>
         <fieldset>
             <legend>Credentials</legend>
             <label for="password">
                 Password:
-                <input type="password" id="password">
+                <input type="password" id="password" name="password">
             </label>
             <hr>
             <label for="confirm-password">
                 Confirm Password:
-                <input type="password" id="confirm-password">
+                <input type="password" id="confirm-password" name="confirm-password">
             </label>
         </fieldset>
         <fieldset>
             <legend>Preferences</legend>
             <label for="dark">
-                <input type="radio" name="theme" id="dark"> Dark
+                <input type="radio" name="theme" value="dark" id="dark"> Dark
             </label>
             <br>
             <label for="light">
-                <input type="radio" name="theme" id="dark" checked> Light
+                <input type="radio" name="theme" id="light" value="light" checked> Light
             </label>
         </fieldset>
         <fieldset>
             <legend>Pet</legend>
             <label for="dog">
-                <input type="checkbox" id="dog"> Dog
+                <input type="checkbox" id="dog" name="pet" value="dog"> Dog
             </label>
             <br>
             <label for="cat">
-                <input type="checkbox" id="cat"> Cat
+                <input type="checkbox" id="cat" name="pet" value="cat"> Cat
             </label>
            <br>
             <label for="hamester">
-                <input type="checkbox" id="hamester"> Hamester
+                <input type="checkbox" id="hamester" name="pet" value="hamester"> Hamester
             </label>
         </fieldset>
         <fieldset>
             <legend>State</legend>
             <label for="state">
                 State: 
-                <select id="state">
+                <select id="state" name="state">
                     <option value="">[...]</option>
                     <option value="SP">São Paulo</option>
                     <option value="MG">Minas Gerais</option>
@@ -71,11 +71,10 @@
         </fieldset>
         <fieldset>
             <legend>Comments</legend>
-            <textarea cols="30" rows="10"></textarea>
+            <textarea cols="30" rows="10" name="comments"></textarea>
         </fieldset>
         <button type="submit">✔Send</button>
         <button type="reset">❌Clean</button>
-
     </form>
 </body>
 </html>
