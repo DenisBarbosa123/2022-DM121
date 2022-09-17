@@ -46,6 +46,18 @@ body > div {
     border-color: #6FCF97;
 }
 
+.toast.error {
+    border-color: #EB5757;
+}
+
 .toast.success .icon{
     background-image: url(images/successButton.svg);
+}
+
+.toast.error .icon{
+    background-image: url(images/errorButton.svg);
+}
+
+.toast header > img {
+    cursor: pointer;
 }
