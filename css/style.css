@@ -6,15 +6,27 @@
 #header{
     background-color: darkslategray;
     padding: 15px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    border: 1px solid red;
+    color: white;
 }
 
-.highlight{
+p, .highlight{
+    transition: all 0.5s ease-in-out;
+
+}
+
+p:hover{
+    color: #eee;
+}
+
+
+p:hover .highlight{
     padding: 2px;
     background-color: lime;
+    color: black;
 }
 
 .extra {
@@ -25,4 +37,29 @@ h1 {
 
 [title]{
     cursor: help;
+}
+
+p{
+    margin-bottom: 50px;
+    border-bottom: 2px solid gray;
+    padding-bottom: 50px;
+    padding-left: 15px;
+}
+
+p::selection{
+    background-color: black;
+    color: lime;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+
+a:link[href^='http']::after{
+    content: "↗";
 }
